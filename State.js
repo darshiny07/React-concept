@@ -3,17 +3,22 @@ import statueList from './Data.js'
 import { useState } from 'react'
 
 
-const App = () => {
+const State = () => {
    const [index,setIndex] = useState(0)
     const [showmore, setShowMore] = useState()
-    const [previous,setPrevious] = useState()
+ 
 
-    function handleClick() {
+    let preState = index > 0
+    let hasNext = index < statueList.length - 1
+
+    function handleNext() {
+        if(hasNext)
         setIndex(index + 1)
     }
 
     function handlePrevious(){
-        setPrevious(previous - 1)
+            if(preState)
+        setIndex(index - 1)
     }
 
 
@@ -28,9 +33,9 @@ const App = () => {
         {statue.name}
         by {statue.artist}
       </h2>
-      <button onClick={handleClick}>Next</button> &nbsp;
+      <button onClick={handleNext} disabled={!hasNext}>Next</button> &nbsp;
 
-      <button onClick={handlePrevious}>Previous</button>
+      <button onClick={handlePrevious} disabled={!preState}>Previous</button>
 
       <button onClick={handleShowMore}>{showmore? "hide" : "show"} details</button>
       {showmore && <p>{statue.description}</p> }
@@ -43,7 +48,7 @@ const App = () => {
   )
 }
 
-export default App
+export default State
 
 
 
