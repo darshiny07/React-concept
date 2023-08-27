@@ -1,0 +1,72 @@
+
+    
+    .tag{
+      border: 1px solid black;
+    }
+    .taskSelect{
+      border: 1px solid black;
+    }
+    .Addtask{
+        border: 1px solid black;  
+    }
+    .appHeader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-bottom: 1px solid black;    */
+        padding-top: 80px; 
+    }
+    
+    .taskInput{
+        font-size: 20px;
+        height: 30px;
+        background-color: rgb(242, 239, 239);
+        color: black;
+        width: 100%;
+        border-radius: 5px;
+        padding: 15px 12px;
+        border-color: 1px solid rgb(104, 103, 103);
+    }
+
+    .appHeader > form {
+        width: 30%;
+    }
+
+ .taskFromButton{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+   
+ }
+
+ .tag{
+    font-size: 12px;
+    font-weight: 200;
+    background-color: rgb(242, 239, 239);
+    border: 1px solid rgb(194, 192, 192);
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 2px 10px;
+    cursor: pointer;
+ }
+
+ .taskSelect{
+    font-size:14px ;
+    font-weight: 300;
+    background-color: rgb(242, 239, 239);
+    border: 1px solid rgb(194, 192, 192);
+    padding: 2px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+ }
+
+ .Addtask{
+    font-size:14px ;
+    font-weight: 700;
+    color: white;
+    background-color: #3594f9;
+    border: 1px solid rgb(194, 192, 192);
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+ }

@@ -1,35 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
+import React from 'react'
+import './index.css'
+import './App.css'
+import Taskform from './Taskform'
  
-function App( ) {
-  const [item , setItem] = useState([
-    {id: 1,
-    checked: true,
-  item: "practice code" },
-  {id: 2,
-    checked: false,
-  item: "sleep" },
-  {id: 3,
-    checked: true,
-  item: "Eat" },
-  ])
-    return (
-    <div className="justify">
-      <ul>
-       
-          {item.map((item)=>(
-            <li><input type= "checkbox" checked ={item.checked}></input>
-            <label>{item.item}</label>
-            <button>   <DeleteIcon  color='primary'/></button>
-            </li>
-          )
-          )}
-        
-      </ul>
+const App = () => {
+  return (
+    <div>
+          <Taskform/>
+      <main className='appMain'>
+        <section className='taskColumn'>Section 1</section>
+        <section className='taskColumn'>Section 1</section>
+        <section className='taskColumn'>Section 1</section>
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
