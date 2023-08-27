@@ -1,3 +1,18 @@
-.justify{
-  align-items: start;
+.app{
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+.appMain{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 80px;
+}
+
+.taskColumn{
+  width: 33.33%;
+  background-color: aquamarine;
+  border: 1px black;
+  margin: 160px;
+  padding: 5px;
 }
